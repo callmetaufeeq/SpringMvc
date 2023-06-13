@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>play</title>
 </head>
 <body>
-<h3> ${name} and Age is ${empAge}</h3>
+<h3> ${param.empName} and Age is ${param.age}</h3>
 </body>
 </html>

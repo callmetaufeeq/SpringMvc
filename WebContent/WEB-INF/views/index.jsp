@@ -8,5 +8,13 @@
 </head>
 <body>
 <h1>Welcome to home!</h1>
+
+<form action="cources" method="post"> 
+
+Employee Name :  <input type="text" name="empName" placeholder="Enter Emp Name"><br><br>
+Employee Age  :  <input type="number" name="age" placeholder="Enter Emp Age"><br>
+<input type="submit" value="save">
+</form>
+
 </body>
 </html>
