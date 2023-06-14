@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -35,7 +36,7 @@ public class HomeController {
 		return "hello";
 	}
 	
-	@RequestMapping(value="/cources" ,method=RequestMethod.POST)
+	@RequestMapping(value="/courcesold" ,method=RequestMethod.POST)
 	public ModelAndView couces(HttpServletRequest request ) {
 		String name= request.getParameter("empName");
 		String age=request.getParameter("age");
@@ -48,6 +49,20 @@ public class HomeController {
 		model.addObject("date",date);
 		model.addObject("cources",cources);
 		
+		return model;
+	}
+	
+	@RequestMapping(value = "/cources", method = RequestMethod.POST)
+	public ModelAndView coucesList(@RequestParam("empName") String name, @RequestParam("age") String age) {
+		Date date = new Date();
+		List<String> cources = getCources();
+
+		ModelAndView model = new ModelAndView();
+		model.addObject("name", name);
+		model.addObject("age", age);
+		model.addObject("date", date);
+		model.addObject("cources", cources);
+
 		return model;
 	}
 
