@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cources</title>
+<title>COURSES</title>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 	<hr />
 
 
-<ul>
+	<ul>
 		<c:forEach var="temp" items="${cources}">
 			<li>${temp}</li>
 
